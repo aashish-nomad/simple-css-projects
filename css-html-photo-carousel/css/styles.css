@@ -1,0 +1,48 @@
+body {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(236, 236, 236);
+}
+
+.carousel-container {
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  box-shadow: 4px 4px 16px rgb(255, 255, 255);
+}
+
+.photo-container {
+  height: 500px;
+  width: 500px;
+  display: flex;
+  overflow: hidden;
+  border-radius: 20px;
+  scroll-behavior: smooth;
+}
+
+.photo-container img {
+  width: 500px;
+  height: fit-content;
+  object-fit: contain;
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin: 20px 10px 0 10px;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(247, 247, 247));
+  box-shadow: 0 1px 5px rgb(177, 176, 176), inset 1px 1px 2px rgb(255, 255, 255);
+}
