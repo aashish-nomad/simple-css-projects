@@ -1,3 +1,157 @@
-nav .tech-container img {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #030712;
+  font-family: "Inter", sans-serif;
+}
+
+nav h3.logo-text {
+  color: #e5e7eb;
+  margin: 0;
+  font-size: 18px;
+}
+
+nav .nav-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 16px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+nav .logo {
   height: 30px;
+}
+
+nav .tech-container {
+  flex-basis: 125px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  justify-content: end;
+}
+
+nav .tech-container img {
+  height: 24px;
+  filter: grayscale(.8);
+}
+
+
+nav .menu-container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+nav .menu-container .nav-links {
+  margin-left: 5%;
+}
+
+nav .nav-link {
+  color: #9ca3af;
+  padding: 8px 12px;
+}
+
+nav .nav-link:hover {
+  color: #e5e7eb;
+}
+
+nav .hamburger {
+  display: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.hamburger-list-container .nav-link {
+  display: block;
+  padding: 21px;
+  background-color: #212633;
+}
+
+.hamburger-list-container .nav-link:hover {
+  background-color: #242b41;
+}
+
+.socials {
+  background-color: #9ca3af;
+  width: 42px;
+  padding: 14px 0;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: 0 1px 7px rgb(143 143 143),
+    0 1px 6px rgb(42 42 42);
+
+}
+
+.socials::before {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  height: 50px;
+  right: 0;
+  z-index: -1;
+  width: 24px;
+  border-top-right-radius: 25px;
+  box-shadow: 0 -25px 0 0 #9ca3af;
+}
+
+.socials::after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  height: 50px;
+  right: 0px;
+  z-index: -1;
+  width: 24px;
+  border-top-left-radius: 25px;
+  box-shadow: 0 -25px 0 0 #9ca3af;
+  transform: rotate(180deg);
+}
+
+.socials img {
+  width: 24px;
+}
+
+@media (max-width: 600px) {
+  nav .nav-container {
+    padding: 15px;
+  }
+
+  nav .hamburger {
+    display: block;
+    background-color: transparent;
+    border: none;
+    color: #9ca3af;
+    font-size: 20px;
+    position: relative;
+    top: -2px;
+  }
+
+  .menu-container .nav-links {
+    display: none;
+  }
+
+  nav h3.logo-text {
+    font-size: 14px;
+  }
+
+  nav .tech-container img {
+    height: 18px;
+  }
 }
