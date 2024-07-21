@@ -9,39 +9,42 @@ body {
   padding: 0;
   background-color: #030712;
   font-family: "Inter", sans-serif;
+  color: #9ca3af;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  word-spacing: 2px;
+}
+
+p {
+  word-spacing: 1px;
 }
 
 nav h3.logo-text {
   color: #e5e7eb;
   margin: 0;
   font-size: 18px;
+  word-spacing: initial;
 }
 
 nav .nav-container {
   display: flex;
   justify-content: space-between;
   padding: 30px 16px;
-  max-width: 1400px;
+  max-width: 1140px;
   margin: auto;
 }
 
 nav .logo {
   height: 30px;
 }
-
-nav .tech-container {
-  flex-basis: 125px;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  justify-content: end;
-}
-
-nav .tech-container img {
-  height: 24px;
-  filter: grayscale(.8);
-}
-
 
 nav .menu-container {
   display: flex;
@@ -128,6 +131,155 @@ nav .hamburger {
   width: 24px;
 }
 
+.row {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 80px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.main-section {
+  display: flex;
+  align-items: center;
+}
+
+.section-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.section-content-wrap {
+  max-width: 750px;
+}
+
+.section-content-wrap p {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.headshot {
+  height: 150px;
+  width: 150px;
+  border-radius: 75px;
+  ;
+}
+
+.introduction-text {
+  margin-left: 7%;
+}
+
+.introduction-text h1 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 32px;
+  color: #e5e7eb;
+}
+
+.introduction-text p {
+  max-width: 520px;
+}
+
+@media (max-width: 768px) {
+  .main-section {
+    flex-wrap: wrap;
+  }
+
+  .introduction-text {
+    margin-left: 1%;
+  }
+}
+
+.arrow {
+  border: solid #e5e7eb;
+  border-width: 0 2px 2px 0;
+  padding: 4px;
+  display: inline-block;
+  transform: rotate(45deg);
+}
+
+.project-cards {
+  display: flex;
+  max-width: 750px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  flex-basis: 335px;
+  margin-bottom: 35px;
+}
+
+.project-card:nth-child(odd) {
+  margin-right: 50px;
+}
+
+.project-card .title {
+  font-size: 16px;
+  font-weight: 600;
+
+}
+
+.project-card .title a {
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+.project-card .techstack {
+  width: 100%;
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.project-card .techstack span {
+  position: relative;
+}
+
+.project-card .techstack span:not(:first-child) {
+  padding-left: 16px;
+}
+
+.project-card .techstack span:not(:first-child):before {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 4px;
+  top: 6px;
+  left: 6px;
+  border-radius: 2px;
+  background-color: #9ca3af;
+}
+
+
+.bounce {
+  padding-left: 4px;
+  animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-10px);
+  }
+
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
 @media (max-width: 600px) {
   nav .nav-container {
     padding: 15px;
@@ -149,9 +301,5 @@ nav .hamburger {
 
   nav h3.logo-text {
     font-size: 14px;
-  }
-
-  nav .tech-container img {
-    height: 18px;
   }
 }
